@@ -86,3 +86,31 @@ const filterWorks = (categoryName) => {
   console.log(worksFiltre);
   worksDisplay(worksFiltre);
 };
+
+// gestion du mode admin
+const tokenAdmin = localStorage.getItem("token");
+const administrator = document.querySelector(".js__modal");
+const loginButton = document.getElementById("loginButton");
+const blackBar = document.querySelector(".blackBar");
+const hiddenContainer = document.getElementById("container-filter");
+
+// vérifier l'état de connexion et du mode admin
+const stateLoginButton = function () {
+  if (tokenAdmin) {
+    // utilisateur connecté en mode adm
+    loginButton.textContent = "logout";
+    administrator.style.display = null;
+    blackBar.style.display = null;
+    hiddenContainer.style.display = "none";
+    loginButton.addEventListener("click", () => {
+      localStorage.removeItem("token");
+      alert("Vous avez été déconnecté.");
+      stateLoginButton();
+    });
+  } else {
+    loginButton.textContent = "login";
+    administrator.style.display = "none";
+  }
+};
+stateLoginButton();
+

@@ -197,4 +197,55 @@ footer nav ul {
 	justify-content: center;
 	gap: 10px;
 	padding: 25px 0px 50px 0px;
-  }
+}
+
+.btn {
+	font-family: "Syne";
+	font-weight: 700;
+	color: #1d6154;
+	background-color: white;
+	border-radius: 60px;
+	border: #1d6154 1px solid;
+	min-width: 100px;
+	height: 37px;
+	opacity: 1;
+	transition: 500ms;
+	cursor: pointer;
+}
+  
+.btn:hover {
+	background-color: #1d6154;
+	color: white;
+}
+
+/* login */
+.login {
+	padding-top: 160px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 200px;
+}
+  
+.login p {
+	text-decoration: underline;
+}
+  
+.email,
+.password {
+	width: 379px;
+}
+
+.blackBar {
+	max-width: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background-color: black;
+	width: 100%; /* prend la largeur de l'ecran */
+	height: 59px;
+	font-size: 16px;
+	gap: 10px;
+}  
+
