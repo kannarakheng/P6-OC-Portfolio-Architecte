@@ -1,3 +1,4 @@
+// initier les variables pour stoker les travaux et les catégories
 let worksData = [];
 let categoriesData = [];
 
